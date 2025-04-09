@@ -3,4 +3,4 @@ psycopg2-binary #postgresql
 websockets #for websockets duh
 sqlalchemy #for ORM
 alembic #for migrations
-
+python-dotenv
