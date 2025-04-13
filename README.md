@@ -35,7 +35,7 @@ A simple real-time chat application using **FastAPI** and **React**. Enter a use
 ### 🔧 Backend (FastAPI)
 
 ```bash
-cd backend
+cd Chat-APP/backend
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -45,7 +45,7 @@ fastapi dev main.py
 ### 🌐 Frontend (FastAPI)
 
 ```bash
-cd frontend
+cd ../frontend
 npm install
 npm run dev
 ```

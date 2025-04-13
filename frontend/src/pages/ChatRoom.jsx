@@ -148,14 +148,12 @@ function ChatRoom() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (webSocketRef.current) webSocketRef.current.close();
     };
   }, []);
 
-  // Handle Enter key press for sending messages
   const handleKeyPress = (e) => {
     if (e.key === "Enter") sendMessage();
   };
@@ -175,7 +173,6 @@ function ChatRoom() {
 
       <h1 className="text-2xl font-bold mb-6 text-center">Chat Application</h1>
 
-      {/* Step 1: Room ID Entry */}
       {currentStep === 1 && (
         <div className="flex flex-col items-center p-6 border rounded shadow-md">
           <h2 className="text-xl font-semibold mb-6">Enter Room ID</h2>
@@ -222,7 +219,6 @@ function ChatRoom() {
         </div>
       )}
 
-      {/* Step 2: Username Entry */}
       {currentStep === 2 && (
         <div className="flex flex-col items-center p-6 border rounded shadow-md">
           <h2 className="text-xl font-semibold mb-6">Choose Username</h2>
@@ -258,7 +254,6 @@ function ChatRoom() {
         </div>
       )}
 
-      {/* Step 3: Chat Room */}
       {currentStep === 3 && (
         <div className="flex flex-col flex-grow border rounded p-4 shadow-md">
           <div className="flex items-center justify-between mb-4 border-b pb-2">
