@@ -1,6 +1,5 @@
 fastapi[standard]
-psycopg2-binary #postgresql
-websockets #for websockets duh
-sqlalchemy #for ORM
-alembic #for migrations
+psycopg2-binary
+websockets
+sqlalchemy
 python-dotenv
